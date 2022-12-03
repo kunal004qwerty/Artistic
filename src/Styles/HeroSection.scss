@@ -1,0 +1,58 @@
+// @import "../App.scss";
+.Hero__Container {
+  //   padding-top: calc(var(--header-height)+ 10px);  // that one is coreerct always dd extera pixel like 10 so it not enter the header
+  padding-top: 60px;
+  min-height: 100vh;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .Hero__Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    .hero__info {
+      flex: 3;
+    }
+    .hero__img {
+      flex: 4;
+      // height: 90%;
+      width: 90%;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+    .hero__title {
+      margin-bottom: 1.5rem;
+      max-width: 400px;
+    }
+    .hero__description {
+      margin-bottom: 1.5rem;
+      max-width: 300px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Hero__Wrapper {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+  .hero__img {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      // max-width: 400px;
+      margin-top: auto;
+    }
+  }
+}

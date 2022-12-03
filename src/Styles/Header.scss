@@ -1,0 +1,115 @@
+@import "./theme.scss";
+
+.logo {
+  max-width: 100px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  border-bottom: 1px solid #6c62e2;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    a {
+      font-size: 1.6rem;
+      font-weight: 500;
+      // background-color: aqua;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      // color: #222b5f;
+      // color: red;
+    }
+    a:hover {
+      text-decoration: underline;
+      justify-content: center;
+      align-items: center;
+    }
+    a.active {
+      text-decoration: underline;
+    }
+  }
+
+  .menuIcon,
+  .closeIcon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 3px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      color: #222b5f;
+    }
+    &:hover {
+      background-color: #8080803b;
+      border-radius: 4px;
+    }
+  }
+
+  .closeIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    &:hover {
+      svg {
+        color: #f3f1fe;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 760px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 90%;
+    max-width: 250px;
+    top: 0;
+    right: 0;
+    background-color: #638ae6;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: 0.3s ease transform;
+    overflow: hidden;
+  }
+  nav.open {
+    transform: translate(0);
+  }
+  nav ul li {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+}

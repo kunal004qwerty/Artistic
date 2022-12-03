@@ -1,0 +1,42 @@
+#about {
+  padding: 10rem 0;
+  // border: 1px solid pink;
+  min-height: 100vh;
+  // height: fit-content;
+  max-width: 90%;
+  margin: 0 auto;
+  .about__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .about__subtitle {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #6c62e2;
+  }
+  .about__title {
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+  .about__desc {
+    margin-bottom: 2rem;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    font-size: 1.4rem;
+    .about__wrapper {
+      flex-direction: column;
+    }
+    .about__img {
+      max-width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

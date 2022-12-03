@@ -1,0 +1,51 @@
+.light {
+  header {
+    background-color: #f3f1fe;
+
+    nav ul li a {
+      color: #222b5f;
+    }
+  }
+  nav .closeIcon {
+    svg {
+      color: #222b5f;
+    }
+  }
+  .navMenu .menuIcon {
+    svg {
+      color: #222b5f;
+    }
+  }
+}
+
+.dark {
+  header {
+    background-color: #0a0f19;
+    nav ul li a {
+      color: #f3f1fe;
+    }
+  }
+  nav .closeIcon {
+    svg {
+      color: #f3f1fe;
+    }
+  }
+  .navMenu .menuIcon {
+    svg {
+      color: #f3f1fe;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .HeaderPage_light {
+    nav {
+      background-color: #adbde3;
+    }
+  }
+  .HeaderPage_dark {
+    nav {
+      background-color: #101826;
+    }
+  }
+}
